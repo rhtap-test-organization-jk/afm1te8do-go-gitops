@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: afm1te8do-go-gitops
+  description: This is GitOps manifest for afm1te8do-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: afm1te8do-go
+    backstage.io/kubernetes-id: afm1te8do-go 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: afm1te8do-go-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:afm1te8do-go
